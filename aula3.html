@@ -11,6 +11,14 @@
     <p id="p1">Elemento 1</p>
     <p id="p2">Elemento 2</p>
 
+    <hr>
+
+    <img src="./img/1.jpg" alt="Imagem 1" id="img1">
+    <br>
+    <img src="./img/2.jpg" alt="Imagem 2" id="img2">
+    <br>
+    <button onclick="altimg();">Alterar imagem</button>
+
     <script>
         function alterar(){
             const elemento1 = document.getElementById('p1');
@@ -23,6 +31,17 @@
             document.getElementById('p1').innerHTML = troca;
             document.getElementById('p2').innerHTML = troca2;
             
+        }
+
+        function altimg(){
+            const imagem1 = document.getElementById('img1');
+            const imagem2 = document.getElementById('img2');
+
+            let trocaimg = imagem2.src;
+            let trocaimg2 = imagem1.src;
+
+            document.getElementById('img1').src = trocaimg;
+            document.getElementById('img2').src = trocaimg2;
         }
     </script>
     
