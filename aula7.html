@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7</title>
+</head>
+<body>
+    <h2>JavaScript DOM - upperCase</h2>
+    <h3>Utilizando a função onchange e oninput para alterar o texto digitado pelo usuário.</h3>
+    
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" oninput="converter();">
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome2" onchange="converter();">
+
+    <script>
+        function converter(){
+            const caixa = document.getElementById("nome");
+            caixa.value = caixa.value.toUpperCase();
+            
+
+            const caixa2 = document.getElementById("nome2");
+            caixa2.value = caixa2.value.toUpperCase();
+        }
+
+    </script>
+</body>
+</html>
