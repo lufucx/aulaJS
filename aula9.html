@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div style="background-color: greenyellow; 
+    width: 200px; height: 50px;" onmouseover="mOver(this)" onmouseout="mOut(this)" onclick="mClick(this)">
+    <p style="font-size: 25px;">Passe o mouse</p></div>
+
+    <script>
+        function mOver(obj){
+            obj.innerHTML = 'Luiz'
+            obj.style.color = 'white'
+            obj.style.fontSize = '35px'
+        }
+        function mOut(obj){
+            obj.innerHTML = 'Fernando'
+            obj.style.color = 'red'
+            obj.style.fontSize = '35px'
+        }
+        function mClick(obj){
+            obj.innerHTML = 'Passos'
+            obj.style.color = 'red'
+            obj.style.backgroundColor = 'black'
+            obj.style.fontSize = '35px'
+        }
+
+
+    </script>
+</body>
+</html>
