@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11</title>
+</head>
+
+<body style="font-size: 30px;">
+    <p id="ex"></p>
+    <button onclick="pararRelogio();">Parar relógio</button><br>
+    <button onclick="iniciarRelogio();">Voltar o relógio</button>
+
+    <script>
+        let intervalo;
+
+        function iniciarRelogio() {
+            pararRelogio();
+            intervalo = setInterval(relogio, 1000);
+        }
+
+        function relogio() {
+            const data = new Date();
+            document.getElementById("ex").innerHTML = data.toLocaleTimeString();
+        }
+
+        function pararRelogio() {
+            clearInterval(intervalo);
+        }
+
+    </script>
+</body>
+
+</html>
