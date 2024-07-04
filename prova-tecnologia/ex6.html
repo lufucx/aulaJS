@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <div class="menu">
+            <img src="logo.png" alt width="270px">
+        </div>
+        <div class="container">
+            <div id="titulo">
+                <h3>To Do <br> List <br> </h3>
+                <button> <a href="#data"> Data: </a></button>
+                <button id="bt1"> <a href="#texto">Crie a sua aqui</a></button>
+            </div>
+            <h3> Quinta-feira </h3>
+        </div>
+        <div class="parte-lista">
+            <div class="container2">
+                <h1 class="subtitulo"> Adicionar Elementos na Lista</h1>
+                <input type="text" class=”nome” placeholder="Seu nome">
+                <input type="text" class="nome" placeholder="Digite uma tarefa">
+                <input type="text" class=”nome”
+                    placeholder="Digite seu sobrenome">
+                <h3> Data: </h3>
+                <button onclick="adicionar()"> + </button>
+                <button onclick="remover()"> - </button>
+            </div>
+            <div id="tarefas">
+            </div>
+        </div>
+    </body>
+    <script> 
+        const botao = document.createElement("button");
+        botao.innerHTML = "Cancelar";
+
+        const novadiv = document.createElement("div");
+        novadiv.appendChild(botao);
+
+        document.getElementById("tarefas").appendChild(novadiv);
+
+        const btnRemover = document.getElementsByTagName('button')[3];
+        btnRemover.addEventListener("click", function(){
+            document.getElementById("tarefas").remove();
+        });
+    </script>
+</html>
